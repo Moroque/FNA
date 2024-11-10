@@ -20,8 +20,8 @@ namespace Microsoft.Xna.Framework
 
 		public static void CheckThread()
 		{
-			if (mainThreadId < 0)
-				mainThreadId = Environment.CurrentManagedThreadId;
+            if (mainThreadId < 0)
+                mainThreadId = Environment.CurrentManagedThreadId;
 			else if(!IsMainThread)
 				throw new ThreadStateException("most FNA3D audio/graphics functions must be called on the main thread");
 		}
